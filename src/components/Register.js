@@ -1,8 +1,9 @@
 import React from 'react'
 
-function login() {
+
+function register() {
   return (
-    <div>login</div>
+    <div>register</div>
   )
 }
 export class Register extends React.Component{
