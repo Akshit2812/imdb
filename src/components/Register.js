@@ -2,8 +2,32 @@ import React from 'react'
 
 
 function register() {
-  return (
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email_up").value;
+    var password = document.getElementById("password_up").value;
+
+    let user_records=new Array();
+    user_records= JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[];
+
+    if(user_records.some( (v) => {return v.email==email} )){
+        alert("Email already exists!")
+    }
+    
+    else{
+        user_records.push({
+        "name": name,
+        "email": email,
+        "password": password 
+    })
+    alert("Registration Successful!")
+    }
+
+    localStorage.setItem('users',JSON.stringify(user_records));
+
+    Window.location.href='Login.js';
+    return (
     <div>register</div>
+    
   )
 }
 export class Register extends React.Component{
@@ -17,15 +41,15 @@ export class Register extends React.Component{
             <div className='form'>
                 <div className='form-group'></div>
                 <label htmlFor='username'>Username</label>
-                <input type="text" name='username' placeholder='username'/>
+                <input id='name_up' type="text" name='username' placeholder='username'/>
 
                 <div className='form-group'></div>
                 <label htmlFor='email'>Email</label>
-                <input type="email" name='email' placeholder='Email'/>
+                <input id='email_up' type="email" name='email' placeholder='Email'/>
                 
                 <div className='form-group'></div>
                 <label htmlFor='password'>Password</label>
-                <input type="password" name='password' placeholder='password'/>
+                <input  id='password_up' type="password" name='password' placeholder='password'/>
 
             </div>
             </div>

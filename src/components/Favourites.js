@@ -89,7 +89,7 @@ function Favourites() {
   }
 
   return <>
-    <div className='mt-4 px-2 flex justify-center flex-wrap space-x-2'>
+    <div className=' px-2 flex justify-center flex-wrap space-x-2 bg-slate-900'>
       {
         genres.map((genre) =>
           <button className={
@@ -116,15 +116,15 @@ function Favourites() {
         Action
       </button> */}
     </div>
-    <div className='text-center'>
+    <div className='bg-slate-900 text-center'>
       <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder='Search' className='border border-2 text-center p-1 m-2' />
       <input type="number" value={rows} onChange={(e) => setRows(e.target.value)} placeholder='Rows' className='border border-2 text-center p-1 m-2' />
     </div>
 
-    <div className="flex flex-col m-4">
-      <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-          <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+    <div className="flex flex-col">
+      <div className="bg-slate-900 -my-2 overflow-x-auto sm:-mx-6">
+        <div className="bg-slate-900 py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+          <div className="bg-slate-900 shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50 min-w-full">
                 <tr>

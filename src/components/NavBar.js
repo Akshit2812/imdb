@@ -6,7 +6,7 @@ function NavBar(){
    
 
     return <>
-    <div className='border pl-12 flex space-x-8 items-center py-4'>
+    <div className='z-50 w-full bg-slate-900 pl-12 flex space-x-8 items-center py-4'>
             <img src={Logo} className=' w-[50px] md:w-[60px]'></img>
             <Link to="/" className='text-blue-400 font-semibold text-xl md:text-3xl'>Movies</Link>
             <Link to="Favourites" className='text-blue-400 font-semibold text-xl md:text-3xl'>Favourites</Link>

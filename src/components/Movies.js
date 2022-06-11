@@ -57,8 +57,8 @@ filteredMovies =filteredMovies.filter((movie)=>
 
 
   return <>
-    <div className='mb-8 text-center'>
-        <div className="mt-8 text:xl md:text-2xl font-bold text-center flex justify-center">Trending Movies</div>
+    <div className=' text-center bg-slate-900'>
+        <div className="p-5 text:xl md:text-2xl font-bold text-center flex justify-center text-white">Trending Movies</div>
         <div className='text-center'>
                 <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} 
                 placeholder='Search' className='border border-2 text-center p-1 m-2' />

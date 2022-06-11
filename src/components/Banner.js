@@ -14,7 +14,7 @@ useEffect(function(){
 },[])
     return <>
         <div className={`bg-[url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})] h-[40vh] md:h-[90vh] bg-center bg-cover flex items-end justify-center`}>
-            <div className='text-xl md:text-3xl text-black p-4 bg-slate-400 w-full flex justify-center bg-slate-300'>
+            <div className='text-xl md:text-3xl text-black p-3 bg-slate-400 w-full flex justify-center bg-slate-300'>
                 {movie?.title}</div>
         </div>   
     </>;
