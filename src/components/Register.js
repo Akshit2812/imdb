@@ -42,4 +42,4 @@ export class Register extends React.Component{
 
 }
 
-export default login
+export default register

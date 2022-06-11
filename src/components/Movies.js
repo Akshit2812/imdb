@@ -9,6 +9,9 @@ function Movies() {
   const [hover,setHover]= useState('')
   const [favourites,setFavourites]= useState([])
   const [search, setSearch] = useState("")
+  // const [searchTitle, setSearchTitle] = useState("");
+  // const [loading, setLoading] = useState(false);
+  // const [posts, setPosts] = useState([]);
 //default page no diaplayed is 1
   function goAhead(){
      setPage(page+1);
@@ -59,7 +62,24 @@ filteredMovies =filteredMovies.filter((movie)=>
         <div className='text-center'>
                 <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} 
                 placeholder='Search' className='border border-2 text-center p-1 m-2' />
-                <div className='movie'>{
+                <button className='m-2 text-lg p-1 px-2 bg-gray-400 hover:bg-blue-400 text-white rounded-xl font-bold'>
+                    Search</button>
+                {/* {loading ? (
+        <h4>Loading ...</h4>
+      ) : (
+        posts
+          .filter((value) => {
+            if (searchTitle === "") {
+              return value;
+            } else if (
+              value.title.toLowerCase().includes(searchTitle.toLowerCase())
+            ) {
+              return value;
+            }
+          })
+          .map((item) => <h5 key={item.id}>{item.title}</h5>)
+      )}         */}
+                 <div className='movie'>{
                     movies.length > 0 && movies.map((movie) => <movie key= {movie.id}{...movies} />)
                   }
                 </div>
